@@ -1,12 +1,14 @@
-const server = require("http").createServer();
+const express = require('express')
 const {Users} = require('./utils/users');
+
+const server = express().listen(port, () => console.log('Listening on ${port}'));
+
 const io = require("socket.io")(server, {
     cors: {
         origin: "*",
     },
 });
-var port = process.env.PORT || 5000
-let users = new Users();
+
 
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 io.on("connection", (socket) => {
@@ -29,6 +31,3 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
