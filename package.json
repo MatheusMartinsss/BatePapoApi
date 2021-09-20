@@ -16,6 +16,7 @@
     "babel-cli": "^6.26.0",
     "config": "^3.3.6",
     "express": "^4.17.1",
+    "node-pre-gyp": "^0.17.0",
     "nodemon": "^2.0.12",
     "socket.io": "^4.2.0",
     "websocket": "^1.0.34",
