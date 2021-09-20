@@ -5,7 +5,7 @@ const server = express().listen(port, () => console.log('Listening on ${port}'))
 
 const io = require("socket.io")(server, {
     cors: {
-        origin: "*",
+        origin: "http://localhost:3000/",
     },
 });
 
