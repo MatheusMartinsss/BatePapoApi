@@ -1,6 +1,6 @@
 const express = require('express')
 const {Users} = require('./utils/users');
-const port = 5000;
+const port = process.env.PORT||5000;
 const server = express().listen(port, () => console.log('Listening on ${port}'));
 
 const io = require("socket.io")(server, {
