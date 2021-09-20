@@ -9,7 +9,7 @@ const io = require("socket.io")(server, {
     },
 });
 
-
+const users = new Users();
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 io.on("connection", (socket) => {
     socket.on('Join', (data) =>{
