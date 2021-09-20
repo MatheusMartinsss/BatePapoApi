@@ -8,8 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "build": "babel src -d lib",
-    "server": "npm run build && node src/server.js"
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
